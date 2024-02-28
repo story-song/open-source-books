@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "StoryBook",
+  title: "OpenBook",
   description: "this is a book for web developers writed by story!",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -10,6 +10,8 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "chrome插件", link: "/chrome-plugin/prospectus" },
     ],
+
+    logo: "/public/logo.png",
 
     sidebar: [
       {
@@ -30,8 +32,41 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
-    ],
+    outline: {
+      label: "页面导航",
+    },
+
+    socialLinks: [{ icon: "github", link: "https://github.com/sonxiaopeng" }],
+
+    editLink: {
+      pattern:
+        "https://github.com/sonxiaopeng/open-source-books/edit/main/docs/:path",
+      text: "在github上编辑此页",
+    },
+
+    lastUpdated: {
+      text: "更新于",
+      formatOptions: {
+        dateStyle: "short",
+        timeStyle: "medium",
+      },
+    },
+
+    docFooter: {
+      prev: "上一篇",
+      next: "下一篇",
+    },
+
+    footer: {
+      message: "遵循MIT开源协议",
+      copyright: `版权所有 © 2019-${new Date().getFullYear()} Story`,
+    },
+
+    langMenuLabel: "多语言",
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
   },
 });
