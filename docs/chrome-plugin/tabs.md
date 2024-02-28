@@ -1,11 +1,6 @@
 ## 一、前面的话
 
-本文主要的内容是帮助读者朋友梳理 chrome 插件的 tabs 能力，如果您是第一次阅读本文，也建议您在阅读完本文后，尝试看看我下面的这些系列文章，它们可以更好的帮您认识和了解 chrome 插件：
-
-- [chrome 插件之从 0 到 1](https://juejin.cn/post/7204316982887137337)
-- [chrome 插件之通信（V3 版）](https://juejin.cn/post/7188738032248291385)
-- [chrome 插件之 manifest 配置](https://juejin.cn/post/7188738032248291385)
-- [chrome 插件之玩转 action](https://juejin.cn/post/7248035662073987133)
+本文主要的内容是帮助读者朋友梳理 chrome 插件的 tabs 能力。
 
 ### 1.能力
 

@@ -9,6 +9,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "chrome插件", link: "/chrome-plugin/prospectus" },
+      { text: "react", link: "/react-deep/index" },
     ],
 
     logo: "/public/logo.png",
@@ -30,6 +31,16 @@ export default defineConfig({
           { text: "devtools", link: "/chrome-plugin/devtools" },
         ],
       },
+      // {
+      //   text: "React底层的秘密",
+      //   items: [
+      //     {text: "开篇词", link: "/react-deep/index" },
+      //     { text: "React组件", link: "/react-deep/component" },
+      //     { text: "React状态管理", link: "/react-deep/state" },
+      //     { text: "React生命周期", link: "/react-deep/lifecycle" },
+      //     { text: "React事件", link: "/react-deep/event" },
+      //   ]
+      // }
     ],
 
     outline: {
