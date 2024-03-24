@@ -261,20 +261,3 @@ chrome.proxy.settings.set({ value: config, scope: "regular" }, function () {});
 
 以上就是 proxy 相关的核心知识了，代理其实一般也不会用到，即便用到也有很成熟的解决方案了，因此我们了解一下即可。
 
-## 四、维护
-
-## 五、最后的话
-
-插件系列文章：
-
-- [chrome 插件之从 0 到 1](https://juejin.cn/post/7204316982887137337)
-- [chrome 插件之通信（V3 版）](https://juejin.cn/post/7188738032248291385)
-- [chrome 插件之 manifest 配置](https://juejin.cn/post/7188738032248291385)
-- [chrome 插件之玩转 action](https://juejin.cn/post/7248035662073987133)
-- [chrome 插件之存储系统](https://juejin.cn/post/7268127651168534588)
-- [chrome 插件之脚本注入](https://juejin.cn/post/7278982293707014155)
-- [chrome 插件之内容安全策略 🚫](https://juejin.cn/post/7280050832949887034)
-
-另外我有一个自己的网站，欢迎来看看  [new-story.cn](https://new-story.cn)
-
-创作不易，如果您觉得文章有任何帮助到您的地方，或者触碰到了自己的知识盲区，请帮我点赞收藏一下，或者关注我，我会产出更多高质量文章，最后感谢您的阅读，祝愿大家越来越好。

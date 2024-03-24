@@ -351,14 +351,3 @@ document.getElementById("start").addEventListener("click", async () => {
 ## 四、资源
 
 上面的案例我放在 github 仓库啦：[地址在这里](https://github.com/sonxiaopeng/chrome-extensions-learn/tree/master/scripting)
-
-插件系列文章：
-
-- [chrome 插件之从 0 到 1](https://juejin.cn/post/7204316982887137337)
-- [chrome 插件之通信（V3 版）](https://juejin.cn/post/7188738032248291385)
-- [chrome 插件之 manifest 配置](https://juejin.cn/post/7188738032248291385)
-- [chrome 插件之玩转 action](https://juejin.cn/post/7248035662073987133)
-- [chrome 插件之存储系统](https://juejin.cn/post/7268127651168534588)
-  另外我有一个自己的网站，欢迎来看看  [new-story.cn](https://new-story.cn)
-
-创作不易，如果您觉得文章有任何帮助到您的地方，或者触碰到了自己的知识盲区，请帮我点赞收藏一下，或者关注我，我会产出更多高质量文章，最后感谢您的阅读，祝愿大家越来越好。
