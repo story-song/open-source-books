@@ -65,7 +65,7 @@ Promise.resolve().then(res => console.log("script屁股后的微任务"))
 上面的代码是将一些不同**优先级**（其中值越小优先级越高）的任务陆续交给 Scheduler 来调度，然后顺便测试下调度的执行时机的异步情况。
 然后在 **nodejs** 中运行一下，结果如下：
 
-![image.png](./assets/schedule_01.jpg)
+![image.png](./assets/scheduler_01.jpg)
 
 通过结果我们可以得出结论，Scheduler 会按照优先级的顺序来执行给定的任务，优先级高的就会先执行，如果优先级相同的情况下再按照先注册优先执行。并且只要是交给 Scheduler 的任务都会异步执行，并且是在下一个宏任务中执行。（至于每一个任务是否都是在下一个宏任务，这个我们后面源码部分再了解，先留作疑问！）
 
