@@ -7,12 +7,12 @@ theme: smartblue
 
 从2013年react第一次发布以来已经过去10年多了，10年前[JordWalke](https://twitter.com/jordwalke?lang=en) 出于一个疯狂的想法（只要任何一个状态发生改变，就重新渲染整个页面）创造了react，从此命运的齿轮开始转动，或许当时的他怎么也不会想到react不仅成为了 facebook 最成功的开源作品之一，而且它正在驱动着这个世界上成千上万的web站点，并且迄今为止已经成为全世界范围内**数据驱动视图领域**最流行的前端框架。 
 
-![image.png]("./assets/jsx2js_01.jpg")
+![image.png](./assets/jsx2js_01.jpg)
 上图是JordWalke在JSConf第一次发布react时的场景
 
 
 
-![image.png]("./assets/jsx2js_02.jpg")
+![image.png](./assets/jsx2js_02.jpg)
 上图是[npmtrends](https://npmtrends.com/angular-vs-preact-vs-react-vs-svelte-vs-vue)上的主流框架的npm下载量的数据
 
 然而熟悉react语法的同学肯定知道，react使用的并非真实的DOM来描述UI，而是使用了一种叫做 `JSX` 的语法来描述UI，他可以完全和逻辑结合起来，非常方便我们构建交互复杂、UI变化频繁的场景。
@@ -51,7 +51,7 @@ const App = <div>i am jsx</div>
 但是浏览器的**JS引擎**（下面我们以v8举例）并不能识别这种语法
 
 
-![image.png]("./assets/jsx2js_03.jpg")
+![image.png](./assets/jsx2js_03.jpg)
 
 v8只认符合ECMAScript标准的语法，因此[babel](https://www.babeljs.cn/)就起作用了。
 
@@ -94,7 +94,7 @@ Babel 是一个工具链，主要用于将采用 ECMAScript 2015+ 语法编写�
 过程如图所示：
 
 
-![image.png]("./assets/jsx2js_04.jpg")
+![image.png](./assets/jsx2js_04.jpg)
 
 
 那么babel是天然就可以编译jsx吗？答案是否定的
@@ -205,7 +205,7 @@ function App() {
 
 看下结果
 
-![image.png]("./assets/jsx2js_05.jpg")
+![image.png](./assets/jsx2js_05.jpg)
 
 
 > 小结  
@@ -311,7 +311,7 @@ function createElement(type, config, children) {
 最后从JSX 到 JS 我们得到的就是一个描述UI的javascript对象了
 
 
-![image.png]("./assets/jsx2js_06.jpg")
+![image.png](./assets/jsx2js_06.jpg)
 
 
 ## 五、最后的话
