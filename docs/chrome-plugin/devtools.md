@@ -2,7 +2,7 @@
 
 如果你曾经是 vue 或者 react 的用户，可能都用过他们的开发工具，开发环境下，它可以监测你的站点是否是使用他们的框架开发的，并且能够管理好你的数据状态，极大的帮助我们提升开发效率。
 
-![vuedevtools.jpeg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e5aca8ea0d5454297b7f25de9f2f491~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=640&h=400&s=39900&e=jpg&b=fefefe)
+![image](./assets/devtools_01.jpg)
 
 这种结合 devtools 的插件，可以扩展浏览器中的 devtools 中的界面，然后自定义一些交互，完成更加炫酷和灵活的功能。
 
@@ -18,7 +18,7 @@
 
 一个用于扩展 DevTools 的插件可能有 background、content、option 等部分，但是这些环境都不能访问上面的 API，只有 DevTools 中的 page 可以访问上面的 API。并且他们的关系如下：
 
-![kcLMpTY6qtez03TVSqt4.avif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2f9d3127538342bf802e108f6826593c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1044&h=1112&s=36879&e=avif&b=f1f1f1)
+![image](./assets/devtools_02.jpg)
 
 ### DevTools page
 
@@ -76,10 +76,8 @@ chrome.devtools.panels.elements.createSidebarPane(
 
 通过上面的代码实际上我们就可以创建好了一个新的 DevTools Page 的标签页以及一个新的 slider，效果如下：
 
-![Screen Shot 2023-10-02 at 4.10.33 PM.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/03ab6325d3244ce0851b442a081b9c2e~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1734&h=856&s=261680&e=png&b=ffffff)
-
-![Screen Shot 2023-10-02 at 4.10.43 PM.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5c2ff0f05f52468f8d13266f0dd423a9~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1836&h=654&s=277808&e=png&b=ffffff)
-
+![image](./assets/devtools_03.jpg)
+![image](./assets/devtools_04.jpg)
 ## 三、API 详解
 
 下面来学习一下 DevTools 的 API 的使用方法！
@@ -124,8 +122,7 @@ chrome.devtools.inspectedWindow.getResources((resources) => {
 
 然后你就会得到资源的地址、类型等：
 
-![Screen Shot 2023-10-04 at 12.54.59 PM.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67c3d464ea5f46f695966869ce0cd068~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2088&h=940&s=1595775&e=png&b=fefcfc)
-
+![image](./assets/devtools_05.jpg)
 ### panels
 
 我们可以通过`chrome.devtools.panels`来创建一个新的 DevTools 的标签页，进入已有的标签页，添加侧边栏等。
@@ -150,9 +147,7 @@ chrome.devtools.panels.elements.createSidebarPane(
   }
 );
 ```
-
-![Screen Shot 2023-10-04 at 1.03.45 PM.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5dd16175b78a4ddfaece347157158277~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1084&h=522&s=162010&e=png&b=ffffff)
-
+![image](./assets/devtools_06.jpg)
 ### network
 
 我们可以通过`chrome.devtools.network`来检索在 DevTools 中 network 标签的所有请求。
@@ -171,8 +166,7 @@ chrome.devtools.network.onRequestFinished.addListener(function (request) {
 
 这是查看请求结束后针对 bodySize 的一个检查，request 的结构如下：
 
-![Screen Shot 2023-10-04 at 1.13.08 PM.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91372b95e9ab4836aa858b7f93bc767d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1876&h=508&s=504037&e=png&b=ffffff)
-
+![image](./assets/devtools_07.jpg)
 我们还可以通过
 
 ```js

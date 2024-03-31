@@ -14,9 +14,9 @@ export default defineConfig({
 
     logo: "/public/logo.png",
 
-    sidebar: [
-      {
-        text: "chrome插件开发指南",
+    sidebar: {
+      "/chrome-plugin": {
+        base:'',
         items: [
           { text: "开篇词", link: "/chrome-plugin/prospectus" },
           { text: "从0到1", link: "/chrome-plugin/start" },
@@ -31,17 +31,18 @@ export default defineConfig({
           { text: "devtools", link: "/chrome-plugin/devtools" },
         ],
       },
-      // {
-      //   text: "React底层的秘密",
-      //   items: [
-      //     {text: "开篇词", link: "/react-deep/index" },
-      //     { text: "React组件", link: "/react-deep/component" },
-      //     { text: "React状态管理", link: "/react-deep/state" },
-      //     { text: "React生命周期", link: "/react-deep/lifecycle" },
-      //     { text: "React事件", link: "/react-deep/event" },
-      //   ]
-      // }
-    ],
+      "/react-deep": {
+        base:'',
+        items: [
+          {text: "开篇词", link: "/react-deep/index" },
+          { text: "从JSX到JS", link: "/react-deep/jsx2js" },
+          { text: "初始化", link: "/react-deep/mount" },
+          { text: "调度器", link: "/react-deep/scheduler" },
+          { text: "优先级（上）", link: "/react-deep/priority1" },
+          { text: "优先级（下）", link: "/react-deep/priority2" },
+        ]
+      }
+    },
 
     outline: {
       label: "页面导航",

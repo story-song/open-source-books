@@ -30,7 +30,7 @@ console.log(eval("2 + 2") === eval(new String("2 + 2")));
 
 以上在 web 端运行时完全没问题的，但是如果在 chrome 插件中使用 eval 就会有问题，它会报下面这个错：
 
-![image](./assets/csp_01.jpg)
+![Screen Shot 2023-09-17 at 12.49.44 PM.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/57fc18cea19f462584addd2156605eb7~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1612&h=552&s=132705&e=png&b=fcf7f7)
 
 根据这个报错，我们就回答了第一个问题，内容安全策略的第一个表现就是禁止在 chrome 上下文执行环境中使用`eval`。
 
@@ -77,7 +77,7 @@ eval(script);
 
 除了禁用 eval，还有其他的一些特性，比如你也不能使用`new Function()`的方式来声明一个函数；
 
-![image](./assets/csp_02.jpg)
+![Screen Shot 2023-09-17 at 1.03.27 PM.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1922cd2e8f664614b72481766846d4bd~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1092&h=254&s=68501&e=png&b=fdf3f3)
 
 在 popup.html、options.html 等插件页面中不能有内联的脚本等等，他们都是`内容安全策略`的限制。
 
@@ -145,7 +145,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 当我们加载插件的时候，就会打开 sandbox.html，结果如下：
 
-![image](./assets/csp_03.jpg)
+![Screen Shot 2023-09-18 at 9.40.29 PM.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ac4444c3b03f48d0a48f55d112bb274d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1580&h=1322&s=274549&e=png&b=232427)
 
 - 1. `eval()`能够正常执行
 - 2. 能够使用`内联脚本`
@@ -235,7 +235,7 @@ document.getElementById("sendMessage").addEventListener("click", () => {
 
 效果如下：
 
-![image](./assets/csp_04.jpg)
+![Screen Recording 2023-09-18 at 10.11.50 PM.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1dbabbfc9f4c4408a991fedaf44ab9d1~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2870&h=1698&s=512336&e=gif&f=58&b=1f2425)
 
 至此，我们成功实现了沙盒环境的创建和与插件 page 进行通信。
 
@@ -267,7 +267,8 @@ document.getElementById("sendMessage").addEventListener("click", () => {
 
 我们当然可以去修改这个策略，但是大部分情况下是不需要的，因为对于"extension_pages"来说，默认策略已经是最宽松的限制了，你不能比它更宽松，你只能更严格的限制它。如果你取消某些规则，例如：把“script-src 'self'”解除掉，就会报错：
 
-![image](./assets/csp_05.jpg)
+![Screen Shot 2023-09-18 at 10.29.35 PM.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/050fbef0ae30494e9b7ba3c2b987391b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=960&h=378&s=171828&e=png&b=292a2d)
+
 所以我的建议是，不要去修改这个策略了，因为完全没有必要，因为它已经是最宽松的策略了，如果您不希望自己的人生更加坎坷，不要去轻易修改它。
 
 ## 四、资源
