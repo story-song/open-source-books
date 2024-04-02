@@ -1,5 +1,5 @@
 module.exports = {
-  input: './docs/chrome-plugin/devtools.md',
-  output: './docs/chrome-plugin/assets',
-  name: 'devtools',
+  input: './docs/react-deep/priority1.md',
+  output: './docs/react-deep/assets',
+  name: 'priority1',
 }
