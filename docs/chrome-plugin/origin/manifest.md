@@ -1,3 +1,7 @@
+---
+theme: channing-cyan
+---
+
 ## 一、前言
 
 在我们开发浏览器插件的过程中，`manifest`无疑是我们的基石性文件，也是浏览器插件唯一要求的必要文件，里面的配置涵盖了我们所有想要实现的功能，因此在开发浏览器插件之前，对 manifest 的了解是非常有必要的，本文尝试对 manifest.json 的大部分常用的配置做一个整理和总结，帮助读者快速理解各个配置的作用和用法！
@@ -115,7 +119,7 @@ manifest 远不止以上的这些属性，实际上全部的配置是这样的�
 
    name 属性代表的是插件的名字，它展示在扩展程序管理界面，它的下面就是 description!
 
-![image](./assets/manifest_01.jpg)
+![截屏2023-05-07 下午10.15.20.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb60d968438c45d8866bf9dcd7bf4a78~tplv-k3u1fbpfcp-watermark.image?)
 
 2. version
 
@@ -125,7 +129,7 @@ manifest 远不止以上的这些属性，实际上全部的配置是这样的�
 
    manifest_version 是浏览器插件采用的版本，到目前一共有三种版本，分别是 1、2、和最新版 3。
 
-   ![image](./assets/manifest_02.jpg)
+   ![截屏2023-05-07 下午10.22.33.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4e2d00019af4158b0d82fdbcbaf19a5~tplv-k3u1fbpfcp-watermark.image?)
 
    从官网的描述来看，v3 是从 chrome 88 版本后就开始支持了，v3 版本会更加的安全、隐私、和高性能。因此 chrome 团队鼓励开发者开发 v3 版本的插件。
 
@@ -141,7 +145,7 @@ manifest 远不止以上的这些属性，实际上全部的配置是这样的�
 
    该字段是控制浏览器插件在 tab 栏中的表现的。我们可以通过这个字段配置插件的图标、popup 的内容路径等。
 
-   ![image](./assets/manifest_03.jpg)
+   ![截屏2023-05-09 下午10.28.55.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3c4cd44c8ccf411aab76914d222d77f0~tplv-k3u1fbpfcp-watermark.image?)
 
    它的配置如下：
 
@@ -197,7 +201,7 @@ manifest 远不止以上的这些属性，实际上全部的配置是这样的�
 
    在浏览器插件中，如果我们希望保存一些插件默认的配置，比如插件的主题、全局的状态、布局方式等等，就不太适合放在 content 或者 popup 中，因为他们的生命周期很短，经常刷新。如果保存在 background 中又不能给用户看到，让用户直观感受当前选择的状态，那么这个时候就可以使用 option 配置，它藏在这里：
 
-   ![image](./assets/manifest_04.jpg)
+   ![截屏2023-05-09 下午10.47.02.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d28eefd31d14804847184eff7fb677a~tplv-k3u1fbpfcp-watermark.image?)
 
    右键点击 action 图标就可以出现选项，点击选项就可以看到我们配置的 option 的页面，但是一定是要在 manifest 中配置了 option 才会出现选项这个菜单栏，否则是没有的！它的配置方式如下：
 
@@ -219,7 +223,7 @@ manifest 远不止以上的这些属性，实际上全部的配置是这样的�
 
     其实本质上就是更好的管理插件的能力，因为在插件有很强大的能力，比如访问书签、控制 tab、访问磁盘、跨域请求等等。如果是一个恶意的插件，用户很有可能在无感知的情况下安装并使用了这些插件，恶意插件使用了泄露用户隐私的插件能力就会造成对用户的威胁。但通过加这样的一个 permission 字段，当用户在安装插件时，chrome 浏览器会提醒用户该插件可能会导致哪些问题，使用了哪些比较危险的 api，用户确认与预期的符不符合，可以帮助用户更好的判断是否是一个恶意的插件。从而降低用户权益被侵犯的可能性。他的提示如下：
 
-    ![image](./assets/manifest_05.jpg)
+    ![VVyazEJTquUP7aa6OZn0.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/70a0e49ec827431c88ba0a1b241be1a0~tplv-k3u1fbpfcp-watermark.image?)
 
     用户在安装时就可以看看是否和自己预期的一样！
 
