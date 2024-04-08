@@ -10,12 +10,11 @@
 
 **google**
 
-![Screen Shot 2023-09-16 at 3.22.30 PM.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cebc77bb7e6d428784da333ba6dad770~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2146&h=1298&s=1159244&e=png&b=ffffff)
+![image](./assets/script_01.jpg)
 
 **百度**
 
-![Screen Shot 2023-09-16 at 3.22.37 PM.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6da997c0cac1437c8e4edf8852d6d1af~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1912&h=1066&s=418574&e=png&b=fefefe)
-
+![image](./assets/script_02.jpg)
 但我们不想用肉眼去看，这个时候我们就可以开发一款插件，这款插件会自动识别两种搜索引擎的搜索结果，然后统计他们的搜索词条的标题和数量。
 
 任何需求都可以抽象成若干个简单的小问题，我们将这个需求抽象成下面这样：
@@ -98,9 +97,7 @@ InjectDetails 这个类型的每个字段的含义会在下文中和 MV3 版本�
 ```
 
 为什么还需要加上 host_permissions 呢？其实是因为`scripting`只是给你提供了 scripting 相关的 API，但是要真的使用的话，还得让站点允许你去注入脚本，因为注入脚本是一个非常具有侵入性的动作，所以需要使用`host_permissions`来允许你做一些侵入性的事情，被`host_permissions`匹配的站点就会允许你去注入脚本，否则是不可以的，如果你不配置 host_permissions 就使用 scripting，会报这个错：
-
-![Screen Shot 2023-09-16 at 4.06.11 PM.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e20551f0fb3241babbfb02fafb041414~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1350&h=416&s=311443&e=png&b=f0f2f3)
-
+![image](./assets/script_03.jpg)
 上面配置的 manifest.json 中就是所有站点都允许注入脚本。
 
 **使用**
@@ -120,8 +117,7 @@ chrome.scripting
 
 我们都知道每个网页中可以嵌入 iframe，而一个站点中 iframe 的 javascript 运行时和主站点的 javascript 运行时是相互隔离的，他们的变量也不能够互相访问。
 
-![Screen Shot 2023-09-16 at 4.15.40 PM.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/852832065fe84944b19a3324678c1356~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=950&h=1354&s=443665&e=png&b=ffffff)
-
+![image](./assets/script_04.jpg)
 如果我希望注入的脚本也能够在 main 站点下的所有 iframe 中都生效的话，我可以这样做：
 
 ```js
@@ -346,7 +342,7 @@ document.getElementById("start").addEventListener("click", async () => {
 
 演示效果：
 
-![Screen Recording 2023-09-16 at 5.29.39 PM.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9538b256a34145daad4def09b9e75390~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2870&h=1774&s=1808636&e=gif&f=64&b=fefefe)
+![image](./assets/script_05.jpg)
 
 ## 四、资源
 

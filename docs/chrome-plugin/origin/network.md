@@ -33,7 +33,7 @@
 
 webRequest 定义了一系列的事件来描述每一个请求的经历的心路历程，它们来到插件后，会有类似下面的生命周期：
 
-![image](./assets/network_01.jpg)
+![Screen Shot 2023-09-21 at 10.22.43 PM.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9f4d6a6b3e24a92b019273d250bb973~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=862&h=1062&s=520476&e=png&b=fbfbfb)
 
 每一个事件都代表一个生命周期的钩子，他们的含义如下：
 
@@ -59,7 +59,8 @@ webRequest 定义了一系列的事件来描述每一个请求的经历的心路
 
 给每一个事件做监听之后，打印得到的顺序如下：
 
-![image](./assets/network_02.jpg)
+![Screen Shot 2023-09-21 at 11.04.52 PM.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/434401bf127d4888bca271c7d8ca9405~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1644&h=656&s=142965&e=png&b=242528)
+
 和预期的顺序一致，说明没有问题。
 
 ### 使用方法
@@ -129,7 +130,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 上面的例子就可以监听掘金的请求，以及本地的一个请求了，我们在本地启动一个 node 服务然后再发送一个请求就可以得到下面的请求信息：
 
-![image](./assets/network_03.jpg)
+![Screen Shot 2023-09-23 at 10.36.12 AM.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3eb9403d724444c989e5a802f6e5ee3b~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1464&h=1190&s=332468&e=png&b=ffffff)
+
 同样可以利用它来增加一个请求头，可以这样操作：
 
 ```js
@@ -156,7 +158,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 上面的例子中我们添加了一个请求头的字段，服务端中可以拿到：
 
-![image](./assets/network_04.jpg)
+![Screen Shot 2023-09-23 at 10.49.53 AM.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c05a3acac2c14d71bfd311695c4e7c4c~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1168&h=536&s=269368&e=png&b=000000)
+
 说明修改成功！其他的 API 也都是类似这样的用法，在这里就不一一举例了，我们主要是体验一下通过插件来拦截请求的感觉，以小见大。
 
 ## 二、proxy
