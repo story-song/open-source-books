@@ -1,9 +1,9 @@
 module.exports = {
-  // input: './docs/react-deep/render.md',
-  // output: './docs/react-deep/assets',
-  // name: 'render',
+  input: './docs/react-deep/beginwork.md',
+  output: './docs/react-deep/assets',
+  name: 'beginwork',
 
-  input: './docs/chrome-plugin/script.md',
-  output: './docs/chrome-plugin/assets',
-  name: 'script',
+  // input: './docs/chrome-plugin/beginwork.md',
+  // output: './docs/chrome-plugin/assets',
+  // name: 'beginwork',
 }
