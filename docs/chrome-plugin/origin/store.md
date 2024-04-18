@@ -42,7 +42,7 @@ StorageAPI 有四个不同的区域来实现不同特性的存储功能：
 
 **storage.sync**
 
-![image](./assets/store_01.jpg)
+![Snipaste_2023-08-17_16-38-03.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6fe8ebd05798450f9717ecec99976abb~tplv-k3u1fbpfcp-watermark.image?)
 
 在 chrome 设置中，我们可以选择开启同步模式，它的好处就是对于同一个用户而言，所有登录谷歌账号的终端设备都可以共享部分数据。换句话说，如果我拥有一个谷歌账号，我在不同主机上的浏览器可以共享一些数据。
 
@@ -171,11 +171,11 @@ document.getElementById("storage-show").addEventListener("click", () => {
 
 以下是演示视频：
 
-![image](./assets/store_02.jpg)
+![屏幕录制2023-08-17 下午6.44.17.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aab5ad3d45ee4d60987888db3b788320~tplv-k3u1fbpfcp-watermark.image?)
 
 接下来我将浏览器关闭，然后我们看看数据状况如何：
 
-![image](./assets/store_03.jpg)
+![屏幕录制2023-08-17 下午6.46.58.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eacc96f03de64b6aa1c93af8d45c0ef0~tplv-k3u1fbpfcp-watermark.image?)
 
 可以看到 session 的状态已经丢失了，但是 local 的状态依然存在。
 
@@ -196,7 +196,7 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 });
 ```
 
-![image](./assets/store_04.jpg)
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e376830aa64d40ad82f27baec7f07f6d~tplv-k3u1fbpfcp-watermark.image?)
 
 我们可以看到不同区域的任何一个状态发生变化都可以察觉到，然后在这个函数中我们可以写不同的处理逻辑就好了。
 

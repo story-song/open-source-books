@@ -41,6 +41,9 @@ export default defineConfig({
           { text: "优先级（上）", link: "/react-deep/priority1" },
           { text: "优先级（下）", link: "/react-deep/priority2" },
           { text: "render流程", link: "/react-deep/render" },
+          { text: "beginWork流程", link: "/react-deep/beginwork" },
+          { text: "completeWork流程", link: "/react-deep/completework" },
+          { text: "commit流程", link: "/react-deep/commit" },
         ]
       }
     },
