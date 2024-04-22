@@ -44,6 +44,8 @@ export default defineConfig({
           { text: "beginWork流程", link: "/react-deep/beginwork" },
           { text: "completeWork流程", link: "/react-deep/completework" },
           { text: "commit流程", link: "/react-deep/commit" },
+          { text: "diff算法", link: "/react-deep/diff" },
+          { text: "hooks原理（上）", link: "/react-deep/hooks1" },
         ]
       }
     },
