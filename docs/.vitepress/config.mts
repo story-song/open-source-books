@@ -16,7 +16,7 @@ export default defineConfig({
 
     sidebar: {
       "/chrome-plugin": {
-        base:'',
+        base: "",
         items: [
           { text: "开篇词", link: "/chrome-plugin/prospectus" },
           { text: "从0到1", link: "/chrome-plugin/start" },
@@ -32,9 +32,9 @@ export default defineConfig({
         ],
       },
       "/react-deep": {
-        base:'',
+        base: "",
         items: [
-          {text: "开篇词", link: "/react-deep/index" },
+          { text: "开篇词", link: "/react-deep/index" },
           { text: "从JSX到JS", link: "/react-deep/jsx2js" },
           { text: "初始化", link: "/react-deep/mount" },
           { text: "调度器", link: "/react-deep/scheduler" },
@@ -46,8 +46,11 @@ export default defineConfig({
           { text: "commit流程", link: "/react-deep/commit" },
           { text: "diff算法", link: "/react-deep/diff" },
           { text: "hooks原理（上）", link: "/react-deep/hooks1" },
-        ]
-      }
+          { text: "hooks原理（下）", link: "/react-deep/hooks2" },
+          { text: "suspense&lazy原理", link: "/react-deep/suspense" },
+          { text: "memo、forward原理", link: "/react-deep/memo" },
+        ],
+      },
     },
 
     outline: {
