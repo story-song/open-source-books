@@ -49,6 +49,7 @@ export default defineConfig({
           { text: "hooks原理（下）", link: "/react-deep/hooks2" },
           { text: "suspense&lazy原理", link: "/react-deep/suspense" },
           { text: "memo、forward原理", link: "/react-deep/memo" },
+          { text: "事件系统", link: "/react-deep/event" },
         ],
       },
     },
